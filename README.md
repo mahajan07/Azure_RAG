@@ -1,4 +1,4 @@
-# 🚀 Retrieval Augmented Generation (RAG) with Azure – By Dewank Mahajan
+# 🚀 Retrieval Augmented Generation (RAG) with Azure
 
 A **production-ready RAG pipeline** built with:
 
