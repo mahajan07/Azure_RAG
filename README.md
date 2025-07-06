@@ -21,10 +21,11 @@ Use the provided `requirements.txt` file to install all necessary packages:
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
 
 # 🔐 2. Add Your API Keys (.env)
 **Create a .env file in your project root. Add your Azure OpenAI and Search credentials:**
-
+```bash
 # Azure OpenAI
 OPENAI_API_TYPE="azure"
 OPENAI_API_BASE="https://your-resource.openai.azure.com/"
@@ -35,3 +36,15 @@ OPENAI_API_VERSION="2023-07-01-preview"
 SEARCH_SERVICE_NAME="your-search-url"
 SEARCH_API_KEY="your_search_key"
 SEARCH_INDEX_NAME="your-index-name"
+```
+
+
+# 📈 3. Preprocess & Sample Data
+**If your CSV is large, sample 100 rows and clean the data for embeddings:**
+```bash
+import pandas as pd
+
+df = pd.read_csv('data/your_file.csv')
+df_sample = df.sample(n=100, random_state=42).dropna(axis=1, how='all')
+records = df_sample.to_dict('records')
+```
