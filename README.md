@@ -48,3 +48,37 @@ df = pd.read_csv('data/your_file.csv')
 df_sample = df.sample(n=100, random_state=42).dropna(axis=1, how='all')
 records = df_sample.to_dict('records')
 ```
+
+# 🐳 4. Azure Container App Deployment (Optional)
+1. Use at least 2 CPU cores and 4GB RAM
+2. Expose port 80
+3. Use a GitHub PAT for ghcr.io registry access
+
+# 🧾 Create a Service Principal
+```bash
+
+az ad sp create-for-rbac --name "CICD" --role contributor \
+  --scopes /subscriptions/$AZURE_SUBSCRIPTION_ID --sdk-auth
+```
+# 🧪 Testing the Pipeline
+This project includes examples for:
+
+✅ Creating text embeddings from structured data
+✅ Retrieving relevant content using vector similarity
+✅ Generating grounded responses with LLMs
+
+You can run the demo script or build a custom FastAPI wrapper.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
