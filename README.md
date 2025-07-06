@@ -64,7 +64,9 @@ az ad sp create-for-rbac --name "CICD" --role contributor \
 This project includes examples for:
 
 ✅ Creating text embeddings from structured data
+
 ✅ Retrieving relevant content using vector similarity
+
 ✅ Generating grounded responses with LLMs
 
 You can run the demo script or build a custom FastAPI wrapper.
